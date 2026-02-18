@@ -17,7 +17,6 @@ We propose **SegKV-CF**, a **training-free** KV cache eviction method that addre
 - **Segment-level eviction**: Use separator-defined natural language boundaries as eviction units to better preserve semantic integrity.
 - **Coarse-to-fine refinement**: Perform **semantic coarse selection** during prefilling to retain a high-recall candidate set, then apply **semantic fine refinement** using early response signals during decoding to keep only truly critical segments.
 
-(See paper Sections 1–4 for details.)
 
 ---
 
