@@ -9,8 +9,6 @@ This repository provides the **inference/prediction script** to run SegKV-CF.
 
 ## Introduction
 
-![SegKV-CF Overview](imgs/framework.pdf)
-
 Long-context inference in LLMs requires KV cache whose memory footprint grows linearly with context length, creating substantial memory pressure and latency overhead. Existing KV cache eviction methods mitigate this by evicting tokens deemed unimportant, but they often (i) fail to preserve **semantic integrity** during eviction, and (ii) only rely on importance signals from prefilling that do not always align with **decoding-time**.
 
 We propose **SegKV-CF**, a **training-free** KV cache eviction method that addresses both issues via **segment-level eviction** and a **coarse-to-fine, two-stage refinement** strategy:
@@ -32,3 +30,4 @@ We propose **SegKV-CF**, a **training-free** KV cache eviction method that addre
 python pred.py --model llama-3.1-8b-instruct --kv_comp SegKV_CF
 
 ```
+
